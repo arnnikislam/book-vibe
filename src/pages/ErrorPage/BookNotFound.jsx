@@ -7,8 +7,9 @@ const BookNotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex min-h-[70vh] items-center justify-center p-6">
-      <div className="card w-full max-w-lg border border-base-300 bg-base-100 shadow-sm">
+    <div className="container mx-auto">
+      <div className="flex min-h-[70vh] items-center justify-center w-[92%] mx-auto">
+      <div className="card w-full border border-base-300 bg-base-100 shadow-sm py-6">
         <div className="card-body items-center text-center">
           {/* Icon */}
           <div className="relative mb-2">
@@ -42,6 +43,7 @@ const BookNotFound = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
