@@ -50,8 +50,8 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 space-x-2">{links}</ul>
         </div>
         <div className="navbar-end space-x-3">
-          <button className="btn bg-[#23BE0A] text-white">Success</button>
-          <button className="btn bg-[#59C6D2] text-white">Accent</button>
+          <button className="btn bg-[#23BE0A] text-white">Sign In</button>
+          <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
         </div>
       </div>
     </div>
