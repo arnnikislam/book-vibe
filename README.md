@@ -1,16 +1,59 @@
-# React + Vite
+# Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Vibe is a React app for browsing a small book catalog, saving books to read
+or to a wishlist, and viewing a page-count chart for saved reads.
 
-Currently, two official plugins are available:
+**Live site:** [book-vibe-arnnik.netlify.app](https://book-vibe-arnnik.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse the book catalog and open individual book details.
+- Save books to a read list or wishlist, with duplicate and success notifications.
+- View saved books and sort them by rating, page count, or publication year.
+- See a chart of page counts for books on the read list.
+- Keep read-list and wishlist data in the browser's `localStorage`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Saved lists are local to the current browser and are not synced between devices
+or users.
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Route | Description |
+| --- | --- |
+| `/` | Home page and book catalog |
+| `/books` | Read list and wishlist, with sorting |
+| `/read-pages` | Page-count chart for books marked as read |
+| `/bookDetails/:paramBookId` | Details and save actions for a book |
+
+## Tech stack
+
+- React 19 and React Router
+- Vite
+- Tailwind CSS and daisyUI
+- React Icons, React Toastify, React Tabs, and Recharts
+- Static catalog data in `public/booksData.json`
+
+## Getting started
+
+Requires Node.js and npm.
+
+```sh
+npm install
+npm run dev
+```
+
+Vite prints the local development URL after the server starts.
+
+## Available scripts
+
+```sh
+npm run dev      # Start the development server
+npm run build    # Create a production build in dist/
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+```
+
+## Deployment
+
+The app is deployed on Netlify. The `public/_redirects` file routes requests
+back to `index.html` so client-side routes can be served directly.
